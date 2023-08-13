@@ -79,19 +79,7 @@
             padding: 0px; /* Adjust the padding as needed */
         }
     </style>
-    
-    <script>
-        function openTab(tabName) {
-            var i, tabContent;
-            tabContent = document.getElementsByClassName("tab");
-            for (i = 0; i < tabContent.length; i++) {
-                tabContent[i].style.display = "none";
-            }
-            document.getElementById(tabName).style.display = "block";
-        }
-     
-    </script>
-    <style>
+     <style>
         /* Add any additional styles for the About page here */
         body {
             font-family: 'Arial', sans-serif;
@@ -131,6 +119,18 @@
             height: auto;
         }
     </style>
+    
+    <script>
+        function openTab(tabName) {
+            var i, tabContent;
+            tabContent = document.getElementsByClassName("tab");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+     
+    </script>
 </head>
 <body style="background-image: url('background.jpg'); background-repeat: no-repeat; background-size: cover;">
     
@@ -138,22 +138,24 @@
 </h1>
 
     <div class="tabs">
+        <button class="active" onclick="openTab('aboutTab')">About</button>
         <button class="active" onclick="openTab('homeTab')">Home</button>
         <button onclick="openTab('exercisesTab');">Exercises</button>
         <button onclick="openTab('quizzesTab');">Quizzes</button>
         <button class="active" onclick="openTab('feedbackTab')">Feedback</button>
         <button class="active" onclick="openTab('contactusTab')">Contact Us</button>
     </div>
-     <div class="container">
-        <h1>About Software Design Patterns Visualization</h1>
-        <p>Welcome to the Software Design Patterns Visualization application! Our mission is to make learning software design patterns engaging and interactive.</p>
+    <div id="aboutTab" class="tab" style="display: block;">
+    <div class="container">
+        <h1>About Visualizing Design Patterns: A Student-Centric Learning App</h1>
+        <p>Welcome to the Visualizing Design Patterns: A Student-Centric Learning App! Our mission is to make learning software design patterns engaging and interactive.</p>
         <p>Software design patterns are fundamental concepts in software engineering. They provide solutions to recurring design problems, making code more maintainable and efficient.</p>
         <p>Our application offers visualizations of various design patterns, helping students and developers understand these patterns through interactive examples and quizzes.</p>
         <div class="features">
             <div class="feature">
-                <img src="interactive.png" alt="Interactive Visualizations">
+                <img src="interactive.jpg" alt="Interactive Visualizations">
                 <h3>Interactive Visualizations</h3>
-                <p>Explore design patterns through interactive diagrams and animations that make complex concepts easier to grasp.</p>
+                <p>Explore design patterns through interactive diagrams and examples that make complex concepts easier to grasp.</p>
             </div>
             <div class="feature">
                 <img src="learn.png" alt="Learn at Your Pace">
@@ -161,11 +163,12 @@
                 <p>Whether you're a beginner or an experienced developer, our application caters to your learning needs with quizzes and exercises.</p>
             </div>
             <div class="feature">
-                <img src="community.png" alt="Engage with the Community">
-                <h3>Engage with the Community</h3>
-                <p>Join our community to discuss design patterns, share insights, and collaborate with fellow learners from around the world.</p>
+                <img src="resource.png" alt="Explore More">
+                <h3>Explore Further Resources</h3>
+                <p>Delve deeper into design patterns with additional resources, references, and advanced content to enhance your understanding.</p>
             </div>
         </div>
+    </div>
     </div>
 
     <div id="homeTab" class="tab" style="display: block;">
@@ -597,7 +600,7 @@
         <h3>Social Media</h3>
         <p>Connect with us on social media to stay updated on the latest news, events, and content:
             <ul>
-                <li><b>Facebook:</b><a href="https://l.instagram.com/?u=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100074822601310&e=AT2sjQFC431LqhMw9fuhiipzYl535bDt7iknAPnfI3hLF0OIV0J2JPEfJblodoV5FJwgPNGaYGtVMnfEWbGALP2IN5hxCDd8OFPFCz2kYk3u5ef1IpRW4y7rnwHbdH-Ffjf1pEFyrV8FyMMRfmAsxA" target="_blank" style="color: inherit;">Facebook</a></li>
+                <li><b>Facebook:</b><a href="https://www.facebook.com/" target="_blank" style="color: inherit;">Facebook</a></li>
                 <li><b>Instagram:</b><a href="https://instagram.com/gul_rukh03?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D" target="_blank" style="color: inherit;">Instagram</a></li>
             </ul>
            <p>Whether you have questions about our services, want to collaborate, or simply want to say hello, we look forward to hearing from you. Your feedback and engagement mean a lot to us, and we're committed to providing you with the best experience possible.
