@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facade Pattern
+</title>
+</head>
+<body style="background-image: url('background.jpg'); background-repeat: no-repeat; background-size: cover;">
+    
+    <h1>Patterns and their Description</h1>
+<style>
+        h1, h2, h3, h4, h5, h6 {
+            color: #6B152E;
+            background-color:#D2CECD;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p,ul,ol {
+            font-family: Arial, sans-serif;
+            line-height: 2.0;
+            font-weight: 500;
+            color: #6B152E;
+        }
+        button{font-family: Arial, sans-serif;
+            font-weight: bold;
+            background-color: #D2CECD;
+        color: #6B152E; }
+    </style>
+     <link rel="icon" href="favicon.png" type="image/png">
+     <link rel="stylesheet" href="styles.css">
+<h3>Facade Pattern</h3>
+                <p>The Facade pattern is a design pattern in software engineering that provides a unified interface to a set of interfaces in a subsystem. It simplifies complex systems by providing a higher-level interface that encapsulates the underlying complexity, making it easier for clients to interact with the system.<a href="https://en.wikipedia.org/wiki/facade_pattern" target="_blank" style="color: inherit;">Learn more</a>.</p>
+                <h5>Key Characteristics</h5>
+                <p>Key characteristics of the Facade pattern include:</p>
+                <ol>
+                    <li>
+                       <b>Simplification:  </b>The main purpose of the Facade pattern is to simplify a complex system by providing a simplified interface that hides its underlying complexity.
+                    </li>
+                    <li>
+                        <b>Unified Interface:  </b>The facade class provides a single entry point for clients to interact with the subsystem, abstracting away the details of the individual components within the subsystem.
+                    </li>
+                    <li>
+                        <b>Subsystem:  </b>The subsystem consists of multiple classes and components that work together to achieve a specific functionality. The facade wraps these components to present a more user-friendly interface.
+                    </li>
+                    <li>
+                        <b>Loose Coupling:  </b>The facade reduces coupling between clients and the subsystem by providing an intermediary layer that shields clients from the subsystem's internal structure.
+                    </li>
+                </ol>
+                <h5>Class Diagram</h5>
+                <img src="facade-diagram.png" alt="Facade Pattern Diagram" width="500" height="300">
+                <h5>Example</h5>
+                <p> A real-world example of the Facade pattern can be found in many modern operating systems, where graphical user interfaces (GUIs) provide a user-friendly layer over the complexities of interacting with the system's lower-level components.
+
+                    Consider the process of sending an email using an email client application. Behind the scenes, this process involves various steps, including connecting to a mail server, authenticating, composing the email, and sending it. The Facade pattern can simplify this process for users.
+<button onclick="window.open('facade-example.txt', '_blank')">View Facade Pattern Example</button></p>
+ </li>
+</body>
+</html>
+            

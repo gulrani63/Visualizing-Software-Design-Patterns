@@ -1,0 +1,37 @@
+import copy
+
+class CharacterPrototype:
+    def clone(self):
+        return copy.deepcopy(self)
+
+class Character(CharacterPrototype):
+    def __init__(self, name, health, attack_power):
+        self.name = name
+        self.health = health
+        self.attack_power = attack_power
+
+    def __str__(self):
+        return f"{self.name} (Health: {self.health}, Attack Power: {self.attack_power})"
+
+# Create a prototype character
+prototype_character = Character("Prototype Character", health=100, attack_power=10)
+
+# Create new characters by cloning the prototype
+character1 = prototype_character.clone()
+character1.name = "Character 1"
+
+character2 = prototype_character.clone()
+character2.name = "Character 2"
+character2.health = 120
+
+# Print the created characters
+print(character1)  # Output: Character 1 (Health: 100, Attack Power: 10)
+print(character2)  # Output: Character 2 (Health: 120, Attack Power: 10)
+
+In this example, the CharacterPrototype class defines the cloning interface, and the Character class is the concrete prototype. You create a prototype character with initial attributes, and then you clone it to create new instances. The Prototype pattern allows you to customize each instance without going through the complexities of explicit object creation and initialization. This pattern is especially useful when object creation is resource-intensive or complex.
+
+
+
+
+
+

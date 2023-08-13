@@ -1,0 +1,44 @@
+from abc import ABC, abstractmethod
+
+# Strategy Interface
+class PaymentStrategy(ABC):
+    @abstractmethod
+    def process_payment(self, amount):
+        pass
+
+# Concrete Strategies
+class CreditCardPayment(PaymentStrategy):
+    def process_payment(self, amount):
+        print(f"Processing credit card payment of ${amount}")
+
+class PayPalPayment(PaymentStrategy):
+    def process_payment(self, amount):
+        print(f"Processing PayPal payment of ${amount}")
+
+class DigitalWalletPayment(PaymentStrategy):
+    def process_payment(self, amount):
+        print(f"Processing digital wallet payment of ${amount}")
+
+# Context (Client)
+class ShoppingCart:
+    def __init__(self, payment_strategy):
+        self.payment_strategy = payment_strategy
+
+    def checkout(self, total_amount):
+        self.payment_strategy.process_payment(total_amount)
+
+# Client Code
+credit_card_strategy = CreditCardPayment()
+paypal_strategy = PayPalPayment()
+wallet_strategy = DigitalWalletPayment()
+
+cart1 = ShoppingCart(credit_card_strategy)
+cart2 = ShoppingCart(paypal_strategy)
+cart3 = ShoppingCart(wallet_strategy)
+
+cart1.checkout(100.0)  # Output: Processing credit card payment of $100.0
+cart2.checkout(50.0)   # Output: Processing PayPal payment of $50.0
+cart3.checkout(75.0)   # Output: Processing digital wallet payment of $75.0
+
+
+In this example, the Strategy pattern is used to implement different payment strategies for a shopping cart. The PaymentStrategy interface declares the common method process_payment, which is implemented by concrete strategies like CreditCardPayment, PayPalPayment, and DigitalWalletPayment. The ShoppingCart acts as the context and receives a payment strategy. When the cart is checked out, it delegates the payment processing to the chosen strategy. This pattern allows the shopping cart to use different payment methods interchangeably, without affecting the overall checkout process.

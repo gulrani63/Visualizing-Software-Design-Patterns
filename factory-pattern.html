@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factory Method Pattern
+</title>
+</head>
+<body style="background-image: url('background.jpg'); background-repeat: no-repeat; background-size: cover;">
+    
+    <h1>Patterns and their Description</h1>
+<style>
+        h1, h2, h3, h4, h5, h6 {
+            color: #6B152E;
+            background-color:#D2CECD;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p,ul,ol {
+            font-family: Arial, sans-serif;
+            line-height: 2.0;
+            font-weight: 500;
+            color: #6B152E;
+        }
+        button{font-family: Arial, sans-serif;
+            font-weight: bold;
+            background-color: #D2CECD;
+        color: #6B152E; }
+    </style>
+     <link rel="icon" href="favicon.png" type="image/png">
+     <link rel="stylesheet" href="styles.css">
+<h3>Factory Method Pattern</h3>
+                <p>The Factory Method pattern is a design pattern in software engineering that provides an interface for creating objects but allows subclasses to alter the type of objects that will be created. It's one of the creational patterns and is used to promote loose coupling in code by abstracting the object creation process.<a href="https://en.wikipedia.org/wiki/factory_method_pattern" target="_blank" style="color: inherit;">Learn more</a>.</p>
+                <h5>Key Characteristics</h5>
+                <p>Key characteristics of the Factory Method pattern include:</p>
+                <ol>
+                    <li>
+                       <b>Abstraction of Object Creation: </b> The pattern introduces an abstract factory method in a base class or interface. This method declares how objects are created, but it does not provide a concrete implementation.
+                    </li>
+                    <li>
+                       <b> Subclass Responsibility:</b> Concrete subclasses of the base class or interface implement the factory method to create specific instances of objects. This allows subclasses to control the instantiation process and the type of objects created.
+                    </li>
+                    <li>
+                        <b>Decoupling: </b> The Factory Method pattern promotes loose coupling between the creator (client code) and the concrete products (objects to be created). The client code depends on the factory method interface rather than directly on concrete product classes.
+                    </li>
+                    <li>
+                        <b>Extensibility: </b>New product classes can be introduced by creating new concrete subclasses of the factory method creator without modifying existing client code.
+                    </li>
+                    <li>
+                        <b>Dependency Inversion: </b>The Factory Method pattern adheres to the Dependency Inversion Principle by allowing higher-level modules (client code) to depend on abstractions (factory method interfaces) rather than concrete implementations.
+                    </li>
+                </ol>
+                <h5>Class Diagram</h5>
+                <img src="factory-diagram.png" alt="Singleton Pattern Diagram" width="300" height="300">
+                <h5>Example</h5>
+                <p> Let's consider a software scenario where you're developing a UI framework. You have a base class UIElement that represents various user interface elements like buttons, text boxes, and checkboxes. Each type of UI element needs to be created by a corresponding factory class.
+<button onclick="window.open('factory-example.txt', '_blank')">View Factory Method Pattern Example</button></p>
+ </li>
+</body>
+</html>
+ 

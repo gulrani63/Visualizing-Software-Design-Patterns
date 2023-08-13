@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Abstract Factory Method Pattern
+</title>
+</head>
+<body style="background-image: url('background.jpg'); background-repeat: no-repeat; background-size: cover;">
+    
+    <h1>Patterns and their Description</h1>
+<style>
+        h1, h2, h3, h4, h5, h6 {
+            color: #6B152E;
+            background-color:#D2CECD;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p,ul,ol {
+            font-family: Arial, sans-serif;
+            line-height: 2.0;
+            font-weight: 500;
+            color: #6B152E;
+        }
+        button{font-family: Arial, sans-serif;
+            font-weight: bold;
+            background-color: #D2CECD;
+        color: #6B152E; }
+    </style>
+     <link rel="icon" href="favicon.png" type="image/png">
+     <link rel="stylesheet" href="styles.css">
+<h3>Abstract Factory Method Pattern</h3>
+                <p>The Abstract Factory pattern is a design pattern in software engineering that provides an interface for creating families of related or dependent objects without specifying their concrete classes. It's one of the creational patterns and is used when a system must be independent of how its objects are created, composed, and represented.<a href="https://en.wikipedia.org/wiki/abstract_factory_method_pattern" target="_blank" style="color: inherit;">Learn more</a>.</p>
+                <h5>Key Characteristics</h5>
+                <p>Key characteristics of the Abstract Factory Method pattern include:</p>
+                <ol>
+                    <li>
+                       <b>Interface for Object Creation:  </b> The pattern introduces an abstract factory interface that declares a set of creation methods for creating related objects. Each method corresponds to a "product" or object family.
+                    </li>
+                    <li>
+                       <b> Multiple Implementations: </b> Concrete subclasses of the abstract factory interface provide implementations for creating different variations of related objects, forming different "families."
+                    </li>
+                    <li>
+                        <b>Decoupling: </b> This pattern promotes loose coupling between the client code and the specific classes of objects being created. The client code only interacts with the abstract factory and product interfaces.
+                    </li>
+                    <li>
+                        <b>Dependent Object Families: </b>The Abstract Factory pattern is particularly useful when you need to create objects that are part of a larger family or system and are dependent on each other.
+                    </li>
+                    <li>
+                        <b>Consistency: </b>The Abstract Factory pattern ensures that objects created by a factory are consistent and compatible with each other, as they belong to the same family.
+                    </li>
+                </ol>
+                <h5>Class Diagram</h5>
+                <img src="abstract-factory-diagram.png" alt="Abstract Factory Method Pattern Diagram" width="300" height="300">
+                <h5>Example</h5>
+                <p> Let's consider a scenario where you're building a game that runs on multiple platforms (e.g., Windows, macOS) and supports different types of UI elements (e.g., buttons, menus) specific to each platform. You want to use the Abstract Factory pattern to create UI elements that are compatible with their respective platforms.
+<button onclick="window.open('abstract-factory-example.txt', '_blank')">View Abstract Factory Method Pattern Example</button></p>
+ </li>
+</body>
+</html>
+            

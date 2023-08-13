@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Proxy Pattern
+</title>
+</head>
+<body style="background-image: url('background.jpg'); background-repeat: no-repeat; background-size: cover;">
+    
+    <h1>Patterns and their Description</h1>
+<style>
+        h1, h2, h3, h4, h5, h6 {
+            color: #6B152E;
+            background-color:#D2CECD;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p,ul,ol {
+            font-family: Arial, sans-serif;
+            line-height: 2.0;
+            font-weight: 500;
+            color: #6B152E;
+        }
+        button{font-family: Arial, sans-serif;
+            font-weight: bold;
+            background-color: #D2CECD;
+        color: #6B152E; }
+    </style>
+     <link rel="icon" href="favicon.png" type="image/png">
+     <link rel="stylesheet" href="styles.css">
+<h3>Proxy Pattern</h3>
+                <p>The Proxy pattern is a design pattern in software engineering that provides a surrogate or placeholder for another object to control its access. It's used when you want to add an additional layer of control or functionality to an object's behavior without modifying its core implementation. Proxies can be used to achieve various goals, such as lazy initialization, access control, logging, and caching.<a href="https://en.wikipedia.org/wiki/proxy_pattern" target="_blank" style="color: inherit;">Learn more</a>.</p>
+                <h5>Key Characteristics</h5>
+                <p>Key characteristics of the pattern include:</p>
+                <ol>
+                    <li>
+                       <b>Real Subject: </b>The pattern involves a "Real Subject," which is the actual object being represented or controlled by the proxy.
+                    </li>
+                    <li>
+                       <b>Proxy: </b>The "Proxy" acts as an intermediary between the client and the real subject. It can control access to the real subject and add additional functionality.
+                    </li>
+                    <li>
+                        <b>Same Interface: </b>Both the proxy and the real subject implement the same interface, ensuring that clients can interact with both interchangeably.
+                    </li>
+                    <li>
+                        <b>Types of Proxies:  </b>There are different types of proxies, including:
+
+                            <ul>
+                                <li><b>Virtual Proxy: </b>Defers the creation or initialization of the real subject until it's actually needed. </li>
+                                <li><b>Remote Proxy:</b> Represents an object that resides in a different address space, such as a remote server. </li>
+                                <li><b>Protection Proxy: </b>Controls access to the real subject by enforcing access permissions or additional security checks. </li>
+                                <li><b>Logging Proxy: </b>Adds logging functionality to track interactions with the real subject. </li>
+                                <li><b>Cache Proxy: </b>Stores the results of expensive operations and returns cached results when the same operation is requested again. </li>
+                            </ul>
+                    </li>
+                   
+                </ol>
+                <h5>Class Diagram</h5>
+                <img src="proxy-diagram.png" alt="Proxy Pattern Diagram" width="300" height="300">
+                <h5>Example</h5>
+                <p> A real-world example of the Proxy pattern can be found in image loading and caching systems in web applications. When a web page needs to display images, it can utilize proxy objects to efficiently manage the loading and caching of these images.
+                    Suppose you have a web page that displays various images, and you want to optimize the loading process by using a proxy that caches the images after they are loaded for the first time.
+<button onclick="window.open('proxy-example.txt', '_blank')">View Proxy Pattern Example</button></p>
+ </li>
+</body>
+</html>
+            

@@ -1,0 +1,69 @@
+from abc import ABC, abstractmethod
+
+# Abstract UI Element classes
+class Button(ABC):
+    @abstractmethod
+    def render(self):
+        pass
+
+class Menu(ABC):
+    @abstractmethod
+    def display(self):
+        pass
+
+# Abstract UI Factory interface
+class UIFactory(ABC):
+    @abstractmethod
+    def create_button(self) -> Button:
+        pass
+    
+    @abstractmethod
+    def create_menu(self) -> Menu:
+        pass
+
+# Concrete UI Element classes for Windows
+class WindowsButton(Button):
+    def render(self):
+        return "Rendered a Windows button"
+
+class WindowsMenu(Menu):
+    def display(self):
+        return "Displayed a Windows menu"
+
+# Concrete UI Element classes for macOS
+class MacOSButton(Button):
+    def render(self):
+        return "Rendered a macOS button"
+
+class MacOSMenu(Menu):
+    def display(self):
+        return "Displayed a macOS menu"
+
+# Concrete UIFactory subclasses
+class WindowsUIFactory(UIFactory):
+    def create_button(self):
+        return WindowsButton()
+
+    def create_menu(self):
+        return WindowsMenu()
+
+class MacOSUIFactory(UIFactory):
+    def create_button(self):
+        return MacOSButton()
+
+    def create_menu(self):
+        return MacOSMenu()
+
+# Client code
+def create_and_render_ui(factory: UIFactory):
+    button = factory.create_button()
+    menu = factory.create_menu()
+    return f"{button.render()} and {menu.display()}"
+
+windows_factory = WindowsUIFactory()
+macos_factory = MacOSUIFactory()
+
+print(create_and_render_ui(windows_factory))
+print(create_and_render_ui(macos_factory))
+
+In this example, the Abstract Factory pattern is used to create different sets of UI elements (buttons and menus) that are compatible with specific platforms (Windows and macOS). The abstract UIFactory interface declares the methods for creating buttons and menus. Concrete implementations of the interface (WindowsUIFactory and MacOSUIFactory) provide the necessary implementations for creating Windows-specific and macOS-specific UI elements. The client code interacts with the abstract factory interface and creates UI elements without needing to know the platform-specific classes being used.

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Singleton Pattern </title>
+</head>
+<body style="background-image: url('background.jpg'); background-repeat: no-repeat; background-size: cover;">
+    
+    <h1>Patterns and their Description</h1>
+<style>
+        h1, h2, h3, h4, h5, h6 {
+            color: #6B152E;
+            background-color:#D2CECD;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p,ul,ol {
+            font-family: Arial, sans-serif;
+            line-height: 2.0;
+            font-weight: 500;
+            color: #6B152E;
+        }
+        button{font-family: Arial, sans-serif;
+            font-weight: bold;
+            background-color: #D2CECD;
+        color: #6B152E; }
+    </style>
+     <link rel="icon" href="favicon.png" type="image/png">
+     <link rel="stylesheet" href="styles.css">
+<h3>Singleton Pattern</h3>
+                <p>The Singleton pattern is a design pattern in software engineering that restricts the instantiation of a class to a single instance and provides a global point of access to that instance. This pattern ensures that there's only one instance of the class in the entire system and provides a way to access that instance from various parts of the code. The Singleton pattern is often used when you want to manage a single shared resource, maintain a global state, or ensure that a certain class has a unique instance with controlled access.<a href="https://en.wikipedia.org/wiki/singleton_pattern" target="_blank" style="color: inherit;">Learn more</a>.</p>
+                <h5>Key Characteristics</h5>
+                <p>Key characteristics of the Singleton pattern include:</p>
+                <ol>
+                    <li>
+                       <b>Single Instance:  </b> The class defines a mechanism to create only one instance of itself, usually through a private constructor or static creation method.
+                    </li>
+                    <li>
+                       <b> Global Access:</b> The Singleton instance is globally accessible, allowing other parts of the code to access and interact with it without creating new instances.</li>
+                    <li>
+                        <b>Lazy Initialization: </b> The Singleton instance is created only when it's first requested. This helps improve resource utilization and performance by deferring instance creation until necessary.</li>
+                    <li>
+                        <b>Thread Safety: </b>In multi-threaded environments, the Singleton pattern may need to implement synchronization mechanisms to ensure that only one instance is created even when accessed concurrently.</li>
+                    <li>
+                        <b>Private Constructor: </b>The class often has a private constructor to prevent external code from creating instances using the regular constructor.</li>
+                </ol>
+                <h5>Class Diagram</h5>
+                <img src="singleton-diagram.png" alt="Singleton Pattern Diagram" width="300" height="300">
+                <h5>Example</h5>
+                <p>Let's consider a theoretical example where you might use the Singleton pattern in a software application. Imagine you're building a configuration manager for a game engine. This configuration manager is responsible for loading and providing access to various settings that affect the behavior of the game. Since these settings are typically read from files or other sources, you want to ensure that there's only one instance of the configuration manager to avoid redundant operations and maintain consistency throughout the game's execution.</p>
+                <p>Here's how you might implement the Singleton pattern in this context:
+
+
+                <button onclick="window.open('singleton-example.txt', '_blank')">View Singleton Pattern Example</button></p>  
+            </li>
+</body>
+</html>

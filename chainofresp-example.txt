@@ -1,0 +1,47 @@
+from abc import ABC, abstractmethod
+
+# Handler Interface
+class EventHandler(ABC):
+    def set_next(self, handler):
+        self.next_handler = handler
+
+    @abstractmethod
+    def handle_event(self, event):
+        pass
+
+# Concrete Handlers
+class ButtonHandler(EventHandler):
+    def handle_event(self, event):
+        if event == "click":
+            print("Button clicked")
+        elif self.next_handler:
+            self.next_handler.handle_event(event)
+
+class CheckboxHandler(EventHandler):
+    def handle_event(self, event):
+        if event == "check":
+            print("Checkbox checked")
+        elif self.next_handler:
+            self.next_handler.handle_event(event)
+
+class TextboxHandler(EventHandler):
+    def handle_event(self, event):
+        if event == "input":
+            print("Textbox input received")
+        elif self.next_handler:
+            self.next_handler.handle_event(event)
+
+# Client Code
+button_handler = ButtonHandler()
+checkbox_handler = CheckboxHandler()
+textbox_handler = TextboxHandler()
+
+button_handler.set_next(checkbox_handler)
+checkbox_handler.set_next(textbox_handler)
+
+# Simulate user interactions
+events = ["click", "check", "input", "unknown"]
+for event in events:
+    button_handler.handle_event(event)
+
+In this example, the Chain of Responsibility pattern is used to handle different user interactions in a UI framework. The EventHandler is the handler interface, and concrete handlers like ButtonHandler, CheckboxHandler, and TextboxHandler represent specific UI elements. Each handler decides whether to handle an event or pass it to the next handler in the chain. This pattern allows for flexible event handling and avoids tight coupling between UI elements and event sources, similar to how event propagation works in actual UI frameworks.

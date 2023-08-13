@@ -1,0 +1,34 @@
+# Complex Subsystem Classes
+class MailServer:
+    def connect(self):
+        print("Connected to mail server")
+
+    def authenticate(self):
+        print("Authenticated with mail server")
+
+class EmailComposer:
+    def compose(self, to_address, subject, body):
+        print(f"Composed email:\nTo: {to_address}\nSubject: {subject}\nBody: {body}")
+
+class EmailSender:
+    def send(self):
+        print("Sent email")
+
+# Facade Class
+class EmailClientFacade:
+    def send_email(self, to_address, subject, body):
+        mail_server = MailServer()
+        mail_server.connect()
+        mail_server.authenticate()
+
+        composer = EmailComposer()
+        composer.compose(to_address, subject, body)
+
+        sender = EmailSender()
+        sender.send()
+
+# Client Code
+email_client = EmailClientFacade()
+email_client.send_email("recipient@example.com", "Hello", "This is a test email.")
+
+In this example, the Facade pattern is used to simplify the process of sending an email. The EmailClientFacade provides a unified interface for sending emails, abstracting away the complexities of interacting with the mail server, email composer, and sender components. This makes it easier for clients (users or other parts of the application) to send emails without needing to understand the detailed interactions with the subsystem components.

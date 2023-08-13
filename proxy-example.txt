@@ -1,0 +1,37 @@
+from abc import ABC, abstractmethod
+
+# Real Subject: ImageLoader
+class ImageLoader:
+    def load_image(self, filename):
+        print(f"Loading image '{filename}' from disk")
+        # Simulate loading the image from disk
+        return f"Image data of '{filename}'"
+
+# Proxy: ImageLoaderProxy
+class ImageLoaderProxy(ImageLoader):
+    def __init__(self):
+        self.image_loader = ImageLoader()
+        self.image_cache = {}
+
+    def load_image(self, filename):
+        if filename in self.image_cache:
+            print(f"Retrieving image '{filename}' from cache")
+            return self.image_cache[filename]
+        else:
+            image_data = self.image_loader.load_image(filename)
+            self.image_cache[filename] = image_data
+            return image_data
+
+# Client code
+image_proxy = ImageLoaderProxy()
+
+# First request: Load image from disk
+image_data1 = image_proxy.load_image("image1.jpg")
+print(image_data1)
+
+# Second request: Retrieve image from cache
+image_data2 = image_proxy.load_image("image1.jpg")
+print(image_data2)
+
+
+In this example, the Proxy pattern is used to create an ImageLoaderProxy that serves as an intermediary between the client code and the actual image loader (ImageLoader). The proxy first checks its cache to see if the image is already loaded; if not, it delegates the loading to the real image loader and then stores the loaded image data in its cache. On subsequent requests for the same image, the proxy returns the cached image data, avoiding the need to load the image again. This pattern helps improve performance by reducing redundant image loading operations and leveraging cached results.

@@ -1,0 +1,46 @@
+from abc import ABC, abstractmethod
+
+# Abstraction
+class Shape(ABC):
+    def __init__(self, renderer):
+        self.renderer = renderer
+
+    @abstractmethod
+    def draw(self):
+        pass
+
+# Concrete Abstraction
+class Circle(Shape):
+    def __init__(self, x, y, radius, renderer):
+        super().__init__(renderer)
+        self.x = x
+        self.y = y
+        self.radius = radius
+
+    def draw(self):
+        return f"Drawing Circle at ({self.x}, {self.y}), Radius: {self.radius}, using {self.renderer.render()}"
+
+# Implementation
+class Renderer(ABC):
+    @abstractmethod
+    def render(self):
+        pass
+
+# Concrete Implementations
+class VectorRenderer(Renderer):
+    def render(self):
+        return "Vector Renderer"
+
+class RasterRenderer(Renderer):
+    def render(self):
+        return "Raster Renderer"
+
+# Client code
+circle_with_vector_renderer = Circle(5, 10, 20, VectorRenderer())
+circle_with_raster_renderer = Circle(15, 20, 30, RasterRenderer())
+
+print(circle_with_vector_renderer.draw())
+print(circle_with_raster_renderer.draw())
+
+
+In this example, the Bridge pattern is used to separate shapes (abstractions) from their rendering logic (implementations). The Shape class is the abstraction, and the Renderer class is the implementation. Concrete subclasses of Shape like Circle represent refined abstractions. Concrete implementations like VectorRenderer and RasterRenderer provide the actual rendering logic. This pattern allows you to easily add new shapes or renderers without creating an explosion of subclasses, promoting code reusability and maintainability.

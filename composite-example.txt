@@ -1,0 +1,45 @@
+from abc import ABC, abstractmethod
+
+# Component (Abstract Base Class)
+class UIComponent(ABC):
+    @abstractmethod
+    def render(self):
+        pass
+
+# Leaf components
+class Button(UIComponent):
+    def render(self):
+        return "Rendered a button"
+
+class Label(UIComponent):
+    def render(self):
+        return "Rendered a label"
+
+# Composite component
+class Panel(UIComponent):
+    def __init__(self):
+        self.children = []
+
+    def add(self, component):
+        self.children.append(component)
+
+    def render(self):
+        result = "Rendered a panel\n"
+        for child in self.children:
+            result += child.render() + "\n"
+        return result
+
+# Client code
+button1 = Button()
+button2 = Button()
+label = Label()
+
+panel = Panel()
+panel.add(button1)
+panel.add(button2)
+panel.add(label)
+
+print(panel.render())
+
+
+In this example, the Composite pattern is used to represent a GUI layout. The UIComponent is the abstract base class representing the common interface for both leaf components (Button and Label) and the composite component (Panel). The Panel class can hold other components, and the render method is implemented recursively to render the entire hierarchy. This pattern allows you to build complex GUI layouts by treating individual GUI elements and compositions uniformly, making it easier to manage and maintain the GUI framework.

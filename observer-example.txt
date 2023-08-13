@@ -1,0 +1,51 @@
+from abc import ABC, abstractmethod
+
+# Subject (News Agency)
+class NewsAgency:
+    def __init__(self):
+        self._subscribers = []
+
+    def add_subscriber(self, subscriber):
+        self._subscribers.append(subscriber)
+
+    def remove_subscriber(self, subscriber):
+        self._subscribers.remove(subscriber)
+
+    def notify_subscribers(self, news):
+        for subscriber in self._subscribers:
+            subscriber.update(news)
+
+# Observer (Subscriber)
+class Subscriber(ABC):
+    @abstractmethod
+    def update(self, news):
+        pass
+
+# Concrete Observer (Subscriber Implementation)
+class EmailSubscriber(Subscriber):
+    def __init__(self, name):
+        self.name = name
+
+    def update(self, news):
+        print(f"Email to {self.name}: {news}")
+
+class SMSSubscriber(Subscriber):
+    def __init__(self, phone_number):
+        self.phone_number = phone_number
+
+    def update(self, news):
+        print(f"SMS to {self.phone_number}: {news}")
+
+# Client Code
+news_agency = NewsAgency()
+
+subscriber1 = EmailSubscriber("John")
+subscriber2 = SMSSubscriber("123-456-7890")
+
+news_agency.add_subscriber(subscriber1)
+news_agency.add_subscriber(subscriber2)
+
+# News agency publishes news
+news_agency.notify_subscribers("Breaking news: Observer pattern in action!")
+
+In this example, the Observer pattern is used to simulate a news agency and its subscribers. The NewsAgency acts as the subject, and EmailSubscriber and SMSSubscriber act as concrete observers. When the news agency publishes news, all its subscribers are notified and receive the latest news. This pattern decouples the news agency from its subscribers, allowing subscribers to receive updates without needing to know the details of the news agency's implementation.

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decorator Pattern
+</title>
+</head>
+<body style="background-image: url('background.jpg'); background-repeat: no-repeat; background-size: cover;">
+    
+    <h1>Patterns and their Description</h1>
+<style>
+        h1, h2, h3, h4, h5, h6 {
+            color: #6B152E;
+            background-color:#D2CECD;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p,ul,ol {
+            font-family: Arial, sans-serif;
+            line-height: 2.0;
+            font-weight: 500;
+            color: #6B152E;
+        }
+        button{font-family: Arial, sans-serif;
+            font-weight: bold;
+            background-color: #D2CECD;
+        color: #6B152E; }
+    </style>
+     <link rel="icon" href="favicon.png" type="image/png">
+     <link rel="stylesheet" href="styles.css">
+<h3>Decorator Pattern</h3>
+                <p>The Decorator pattern is a design pattern in software engineering that allows behavior to be added to individual objects, either statically or dynamically, without affecting the behavior of other objects from the same class. It's used to extend the functionalities of objects in a flexible and reusable way, providing an alternative to subclassing for extending behavior.<a href="https://en.wikipedia.org/wiki/decorator_pattern" target="_blank" style="color: inherit;">Learn more</a>.</p>
+                <h5>Key Characteristics</h5>
+                <p>Key characteristics of the Decorator pattern include:</p>
+                <ol>
+                    <li>
+                       <b>Component: </b>The pattern defines an abstract base class (or interface) called the "Component," which represents the core functionality that decorators will enhance.
+                    </li>
+                    <li>
+                       <b>Concrete Component:</b>The "Concrete Component" class implements the core functionality specified by the Component interface.
+                    </li>
+                    <li>
+                        <b>Decorator: </b>The "Decorator" abstract class (or interface) extends the Component interface and holds a reference to a Component object. Decorators can dynamically add new behaviors or functionalities to the wrapped Component.
+                    </li>
+                    <li>
+                        <b>Concrete Decorators:</b>Concrete classes derived from the Decorator class add specific functionalities or behaviors to the wrapped Component.
+                    </li>
+                    <li>
+                        <b>Composition: </b>The pattern uses composition to allow stacking multiple decorators on top of each other, creating a chain of decorators that gradually enhance an object's behavior.
+                    </li>
+                </ol>
+                <h5>Class Diagram</h5>
+                <img src="decorator-diagram.png" alt="Decorator Pattern Diagram" width="300" height="300">
+                <h5>Example</h5>
+                <p>A real-world example of the Decorator pattern can be found in a text processing application that allows users to apply various formatting options (e.g., bold, italic, underline) to text. Instead of creating separate subclasses for each combination of formatting options, the Decorator pattern can be used to dynamically apply these options.
+<button onclick="window.open('decorator-example.txt', '_blank')">View Decorator Pattern Example</button></p>
+ </li>
+</body>
+</html>
+            

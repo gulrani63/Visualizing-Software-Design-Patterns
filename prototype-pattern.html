@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prototype Pattern </title>
+</head>
+<body style="background-image: url('background.jpg'); background-repeat: no-repeat; background-size: cover;">
+    
+    <h1>Patterns and their Description</h1>
+<style>
+        h1, h2, h3, h4, h5, h6 {
+            color: #6B152E;
+            background-color:#D2CECD;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p,ul,ol {
+            font-family: Arial, sans-serif;
+            line-height: 2.0;
+            font-weight: 500;
+            color: #6B152E;
+        }
+        button{font-family: Arial, sans-serif;
+            font-weight: bold;
+            background-color: #D2CECD;
+        color: #6B152E; }
+    </style>
+     <link rel="icon" href="favicon.png" type="image/png">
+     <link rel="stylesheet" href="styles.css">
+<h3>Prototype Pattern</h3>
+                <p>The Prototype pattern is a design pattern in software engineering that allows you to create new objects by copying existing objects, known as prototypes. It's used to create instances of classes with minimal effort and avoid the complexities of repeated object creation.<a href="https://en.wikipedia.org/wiki/prototype_pattern" target="_blank" style="color: inherit;">Learn more</a>.</p>
+                <h5>Key Characteristics</h5>
+                <p>Key characteristics of the Prototype pattern include:</p>
+                <ol>
+                    <li>
+                       <b>Cloneable Objects: </b>The Prototype pattern involves creating cloneable objects, which can be duplicated to create new instances.</li>
+                    <li>
+                       <b>Deep vs. Shallow Cloning:</b>Depending on the complexity of the objects being cloned, you might need to implement deep or shallow cloning. Deep cloning creates a new copy of the entire object hierarchy, while shallow cloning copies only the top-level object, sharing references to nested objects.</li>
+                    <li>
+                        <b>Object Creation:</b>Instead of using constructors or factory methods, the Prototype pattern uses a cloning mechanism to create new instances based on existing ones.</li>
+                    <li>
+                        <b>Runtime Flexibility:</b>The pattern allows you to add or modify object structure at runtime by cloning and altering prototype instances.</li>
+                </ol>
+                <h5>Class Diagram</h5>
+                <img src="prototype-diagram.png" alt="Prototype Pattern Diagram" width="300" height="300">
+                <h5>Example</h5>
+                <p>Consider a scenario where you're developing a game and you want to create instances of characters with varying attributes. The Prototype pattern can be used to create different characters by cloning a prototype character and customizing the attributes.<button onclick="window.open('prototype-example.txt', '_blank')">View Prototype Pattern Example</button></p>  
+            </li>
+</body>
+</html>

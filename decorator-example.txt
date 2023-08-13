@@ -1,0 +1,43 @@
+# Component (Abstract Base Class)
+class TextComponent:
+    def render(self):
+        pass
+
+# Concrete Component
+class PlainTextComponent(TextComponent):
+    def __init__(self, text):
+        self.text = text
+
+    def render(self):
+        return self.text
+
+# Decorator
+class TextDecorator(TextComponent):
+    def __init__(self, component):
+        self.component = component
+
+    def render(self):
+        return self.component.render()
+
+# Concrete Decorators
+class BoldDecorator(TextDecorator):
+    def render(self):
+        return f"<b>{self.component.render()}</b>"
+
+class ItalicDecorator(TextDecorator):
+    def render(self):
+        return f"<i>{self.component.render()}</i>"
+
+class UnderlineDecorator(TextDecorator):
+    def render(self):
+        return f"<u>{self.component.render()}</u>"
+
+# Client code
+plain_text = PlainTextComponent("Hello, world!")
+bold_italic_underline = UnderlineDecorator(ItalicDecorator(BoldDecorator(plain_text)))
+
+print("Plain Text:", plain_text.render())
+print("Formatted Text:", bold_italic_underline.render())
+
+
+In this example, the Decorator pattern is used to create a chain of decorators to format text. The TextComponent is the abstract base class, and the PlainTextComponent is the concrete component. The TextDecorator is the abstract decorator class that extends the Component interface, and the concrete decorators (BoldDecorator, ItalicDecorator, UnderlineDecorator) add specific formatting options to the wrapped TextComponent. This pattern allows you to combine and apply formatting options dynamically to text, creating a flexible and extensible text processing system.

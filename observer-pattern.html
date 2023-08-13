@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Observer Pattern
+</title>
+</head>
+<body style="background-image: url('background.jpg'); background-repeat: no-repeat; background-size: cover;">
+    
+    <h1>Patterns and their Description</h1>
+<style>
+        h1, h2, h3, h4, h5, h6 {
+            color: #6B152E;
+            background-color:#D2CECD;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p,ul,ol {
+            font-family: Arial, sans-serif;
+            line-height: 2.0;
+            font-weight: 500;
+            color: #6B152E;
+        }
+        button{font-family: Arial, sans-serif;
+            font-weight: bold;
+            background-color: #D2CECD;
+        color: #6B152E; }
+    </style>
+     <link rel="icon" href="favicon.png" type="image/png">
+     <link rel="stylesheet" href="styles.css">
+<h3>Observer Pattern</h3>
+                <p>The Observer pattern is a design pattern in software engineering that defines a one-to-many relationship between objects. When the state of one object (the subject) changes, all its dependents (observers) are notified and updated automatically. This pattern promotes loose coupling between objects, allowing them to interact without needing to know each other's specifics.<a href="https://en.wikipedia.org/wiki/observer_pattern" target="_blank" style="color: inherit;">Learn more</a>.</p>
+                <h5>Key Characteristics</h5>
+                <p>Key characteristics of the Observer pattern include:</p>
+                <ol>
+                    <li>
+                       <b>Subject: </b>The object that maintains a list of its observers and notifies them of any state changes.
+                    </li>
+                    <li>
+                       <b>Observer: </b>The objects that depend on the state of the subject and receive notifications when the subject's state changes.
+                    </li>
+                    <li>
+                        <b>Registration: </b>Observers register themselves with the subject to receive notifications.
+                    </li>
+                    <li>
+                        <b>Update: </b>The subject informs its observers about state changes through a defined method (e.g., update).
+                    </li>
+                    <li>
+                        <b>Loose Coupling: </b>The pattern promotes loose coupling between subjects and observers, as the subject doesn't need to know about the concrete observer implementations.
+                    </li>
+                </ol>
+                <h5>Class Diagram</h5>
+                <img src="observer-diagram.png" alt="Observer Pattern Diagram" width="500" height="300">
+                <h5>Example</h5>
+                <p>A classic real-world example of the Observer pattern can be found in news agencies and subscribers. News agencies act as subjects, and subscribers act as observers. When a news agency publishes a new article, all its subscribers (observers) are notified and updated with the latest news.
+<button onclick="window.open('observer-example.txt', '_blank')">View Observer Pattern Example</button></p>
+ </li>
+</body>
+</html>
+            

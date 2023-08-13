@@ -1,0 +1,44 @@
+from abc import ABC, abstractmethod
+
+# Abstract UIElement class
+class UIElement(ABC):
+    @abstractmethod
+    def render(self):
+        pass
+
+# Concrete UIElement subclasses
+class Button(UIElement):
+    def render(self):
+        return "Rendered a button"
+
+class TextBox(UIElement):
+    def render(self):
+        return "Rendered a text box"
+
+# Abstract UIElementFactory class
+class UIElementFactory(ABC):
+    @abstractmethod
+    def create_element(self):
+        pass
+
+# Concrete UIElementFactory subclasses
+class ButtonFactory(UIElementFactory):
+    def create_element(self):
+        return Button()
+
+class TextBoxFactory(UIElementFactory):
+    def create_element(self):
+        return TextBox()
+
+# Client code
+def create_and_render_element(factory):
+    element = factory.create_element()
+    return element.render()
+
+button_factory = ButtonFactory()
+textbox_factory = TextBoxFactory()
+
+print(create_and_render_element(button_factory))  # Output: "Rendered a button"
+print(create_and_render_element(textbox_factory)) # Output: "Rendered a text box"
+
+In this example, the Factory Method pattern is employed to create different types of UI elements. The UIElementFactory abstract class declares the create_element method, which concrete subclasses (ButtonFactory and TextBoxFactory) implement to create specific UIElement instances (Button and TextBox). This design allows you to easily extend the framework by adding new UI element types and corresponding factory classes without changing the existing client code.

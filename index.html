@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visualizing Design Patterns: A Student-Centric Learning App
+</title>
+    
+    <style>
+        h1 {
+            color: #6B152E;
+            background-color:#D2CECD;
+            padding: 10px;
+        }
+    </style>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        h1, h2, h3, h4, h5, h6 {
+            color: #6B152E;
+            background-color:#D2CECD;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p,ul,ol {
+            font-family: Arial, sans-serif;
+            line-height: 2.0;
+            font-weight: 500;
+            color: #6B152E;
+        }
+        button{font-family: Arial, sans-serif;
+            font-weight: bold;
+            background-color: #D2CECD;
+        color: #6B152E; }
+    </style>
+    
+    <style>
+        .tab {
+            display: none;
+        }
+        
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        
+        .tabs button {
+            padding: 10px 20px;
+            background-color: #6B152E;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .tabs button.active {
+            background-color: #6B152E;
+            color: #fff;
+        }
+        .tabs button, .progress-container {
+            font-family: Arial, sans-serif;}
+            .progress-text {
+            font-weight: bold;
+            color: #6B152E;
+           
+    </style>
+    <style>
+
+        .tabs {
+            background-image: url('tab-bg.png'); /* Replace with your tab background image */
+            background-repeat: no-repeat;
+            background-size:cover;
+            padding: 5px; /* Adjust the padding as needed */
+        }
+        
+        /* Add a style for each tab */
+        .tab {
+            background-color: rgba(255, 255, 255, 0.8); /* Set the background color with transparency */
+            padding: 0px; /* Adjust the padding as needed */
+        }
+    </style>
+    
+    <script>
+        function openTab(tabName) {
+            var i, tabContent;
+            tabContent = document.getElementsByClassName("tab");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+     
+    </script>
+</head>
+<body style="background-image: url('background.jpg'); background-repeat: no-repeat; background-size: cover;">
+    
+    <h1>Visualizing Design Patterns: A Student-Centric Learning App
+</h1>
+
+    <div class="tabs">
+        <button class="active" onclick="openTab('homeTab')">Home</button>
+        <button onclick="openTab('exercisesTab');">Exercises</button>
+        <button onclick="openTab('quizzesTab');">Quizzes</button>
+        <button class="active" onclick="openTab('feedbackTab')">Feedback</button>
+        <button class="active" onclick="openTab('contactusTab')">Contact Us</button>
+    </div>
+    
+
+    <div id="homeTab" class="tab" style="display: block;">
+        <h2>What are Software Design Patterns?</h2>
+        <p>Software design patterns are reusable solutions to common problems that developers encounter while designing and implementing software systems. They are general solutions or templates that help developers create well-structured, maintainable, and efficient code by providing proven approaches to solving specific design challenges. These patterns are not specific to a particular programming language or technology but can be applied across various contexts.</p>
+        <p>Design patterns were popularized by the "Gang of Four" (Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides) in their book "Design Patterns: Elements of Reusable Object-Oriented Software," published in 1994. This book introduced 23 foundational design patterns that have since become widely recognized and used in software development.</p>
+        <p><b>There are three main categories of design patterns:</b></p>
+        <p>Click on each pattern to learn more.</p>
+        <ul>
+            <li><b>Creational Design Patterns:</b> These patterns focus on the process of object creation. They provide ways to instantiate objects while hiding the complexity of instantiation, class creation, or composition. Examples include:
+            <p><ul><li><b><a href="singleton-pattern.html" target="_blank" style="color: inherit;">Singleton Pattern</a></b></li>
+            <li><b><a href="factory-pattern.html" target="_blank" style="color: inherit;">Factory Method Pattern</a></b></li>
+            <li><b><a href="abstract-factory-pattern.html" target="_blank" style="color: inherit;">Abstract Factory Method Pattern</a></b></li>
+            <li><b><a href="builder-pattern.html" target="_blank" style="color: inherit;">Builder Pattern</a></b></li>
+            <li><b><a href="prototype-pattern.html" target="_blank" style="color: inherit;">Prototype Pattern</a></b></li>
+        </ul></p></li>
+        <li>
+            <b>Structural Design Patterns: </b>These patterns deal with the composition of classes or objects to form larger structures while keeping these structures flexible and efficient. Examples include:
+            <p>
+                <ul>
+                    <li><b><a href="adapter-pattern.html" target="_blank" style="color: inherit;">Adapter Pattern</a></b></li>
+                    <li><b><a href="composite-pattern.html" target="_blank" style="color: inherit;">Composite Pattern</a></b></li>
+                    <li><b><a href="decorator-pattern.html" target="_blank" style="color: inherit;">Decorator Pattern</a></b></li>
+                    <li><b><a href="bridge-pattern.html" target="_blank" style="color: inherit;">Bridge Pattern</a></b></li>
+                    <li><b><a href="facade-pattern.html" target="_blank" style="color: inherit;">Facade Pattern</a></b></li>
+                    <li><b><a href="proxy-pattern.html" target="_blank" style="color: inherit;">Proxy Pattern</a></b></li>
+                </ul>
+            </p>
+        </li>
+        <li><b>Behavioral Design Patterns:</b> These patterns address communication and interaction between objects, focusing on how objects collaborate and fulfill their responsibilities. Examples include:
+        <p>
+            <ul>
+            <li><b><a href="chainofresp-pattern.html" target="_blank" style="color: inherit;">Chain of Responsibility Pattern</a></b></li>
+            <li><b><a href="observer-pattern.html" target="_blank" style="color: inherit;">Observer Pattern</a></b></li>
+            <li><b><a href="strategy-pattern.html" target="_blank" style="color: inherit;">Strategy Pattern</a></b></li>
+
+            </ul>
+        </p>
+    </li>
+        </ul>
+    </div>
+        
+    <div id="exercisesTab" class="tab">
+        <h2>Exercises</h2>
+        <!-- Exercises section content -->
+<ol>
+            <li>
+                <h3>Singleton Pattern</h3>
+                <nl>Exercise 1:Implement a Singleton class in Java that manages a configuration settings object. Ensure that only one instance of the configuration is created.</nl>
+                <textarea id="exercise1"></textarea>
+                <button onclick="saveExercise(1)">Save</button>
+                <p id="result1"></p>
+            </li>
+            <li>
+                <h3>Factory Method Pattern</h3>
+                <nl>Exercise 2: Design a factory method in Java for creating different types of pizza objects (cheese, pepperoni, veggie).</nl>
+                <textarea id="exercise2"></textarea>
+                <button onclick="saveExercise(2)">Save</button>
+                <p id="result1"></p>
+                <li>
+                    <h3>Abstract Factory Pattern</h3>
+                    <nl>Exercise 3: Create an abstract factory in Java for producing UI elements (buttons, text fields) for both desktop and mobile applications.</nl>
+                    <textarea id="exercise3"></textarea>
+                    <button onclick="saveExercise(3)">Save</button>
+                    <p id="result3"></p>
+                </li>
+                <li>
+                    <h3>Builder Pattern</h3>
+                    <nl>Exercise 4: Implement a builder class in Java for constructing a complex meal (appetizer, main course, dessert) in a restaurant.</nl>
+                    <textarea id="exercise4"></textarea>
+                    <button onclick="saveExercise(4)">Save</button>
+                    <p id="result4"></p>
+                </li>
+                <li>
+                    <h3>Prototype Pattern</h3>
+                    <nl>Exercise 5:Design a prototype mechanism in Java to clone and modify existing graphic elements (circles, squares).</nl>
+                    <textarea id="exercise5"></textarea>
+                    <button onclick="saveExercise(5)">Save</button>
+                    <p id="result5"></p>
+                </li>
+                <li>
+                    <h3>Adapter Pattern</h3>
+                    <nl>Exercise 6:Develop an adapter class in Java to connect a legacy payment system to a new payment interface.</nl>
+                    <textarea id="exercise6"></textarea>
+                    <button onclick="saveExercise(6)">Save</button>
+                    <p id="result6"></p>
+                </li>
+                <li>
+                    <h3>Bridge Pattern</h3>
+                    <nl>Exercise 7:Create a bridge in Java between different drawing tools (pen, pencil) and shapes (circle, square).</nl>
+                    <textarea id="exercise10"></textarea>
+                    <button onclick="saveExercise(7)">Save</button>
+                    <p id="result7"></p>
+                </li>
+                <li>
+                    <h3>Composite Pattern</h3>
+                    <nl>Exercise 8:Implement a composite structure in Java to represent a company hierarchy with employees as leaf nodes and departments as composites.</nl>
+                    <textarea id="exercise8"></textarea>
+                    <button onclick="saveExercise(8)">Save</button>
+                    <p id="result8"></p>
+                </li>
+                <li>
+                    <h3>Decorator Pattern</h3>
+                    <nl>Exercise 9:Design a decorator system in Java to add toppings (cheese, vegetables) to pizza objects.</nl>
+                    <textarea id="exercise10"></textarea>
+                    <button onclick="saveExercise(9)">Save</button>
+                    <p id="result9"></p>
+                </li>
+                <li>
+                    <h3>Facade Pattern</h3>
+                    <nl>Exercise 10:Create a facade in Java to simplify interactions with a complex library (file compression, encryption).</nl>
+                    <textarea id="exercise10"></textarea>
+                    <button onclick="saveExercise(10)">Save</button>
+                    <p id="result10"></p>
+                </li>
+                <li>
+                    <h3>Proxy Pattern</h3>
+                    <nl>Exercise 11:Develop a virtual proxy in Java to load and display high-resolution images only when they are needed.</nl>
+                    <textarea id="exercise11"></textarea>
+                    <button onclick="saveExercise(11)">Save</button>
+                    <p id="result11"></p>
+                </li>
+                <li>
+                    <h3>Chain of Responsibility Pattern</h3>
+                    <nl>Exercise 12:Implement a chain of email processors in Java to handle tasks like spam filtering, virus scanning, and message formatting.</nl>
+                    <textarea id="exercise12"></textarea>
+                    <button onclick="saveExercise(12)">Save</button>
+                    <p id="result12"></p>
+                </li>
+                <li>
+                    <h3>Observer Pattern</h3>
+                    <nl>Exercise 13:Design a weather station simulation in Java using the Observer Pattern. Implement weather data as the subject and displays as observers.</nl>
+                    <textarea id="exercise13"></textarea>
+                    <button onclick="saveExercise(13)">Save</button>
+                    <p id="result13"></p>
+                </li>
+            <li>
+                <h3>Strategy Pattern</h3>
+                <nl>Exercise 14:Develop a payment system in Java using the Strategy Pattern. Create payment methods (credit card, PayPal) as strategies, and allow clients to select a payment method.</nl>
+                <textarea id="exercise14"></textarea>
+                <button onclick="saveExercise(14)">Save</button>
+                <p id="result14"></p>
+            </li>
+        </ol>
+    </div>
+
+    <div id="quizzesTab" class="tab">
+        <h2>Quizzes</h2>
+        <!-- Quizzes section content -->
+<ol>
+            <li>
+                <p><b>Quiz 1: What problem does the Singleton Pattern solve?</b></p>
+                <label>
+                    <input type="radio" name="quiz1" value="a">a) Complex object creation
+                </label>
+                <label>
+                    <input type="radio" name="quiz1" value="b">b) Managing multiple instances
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz1" value="c">c) Incompatible interfaces 
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz1" value="d">d) Decorator composition
+            </label>
+                <button onclick="checkQuiz(1)">Check</button>
+                <p id="quizResult1"></p>
+            </li>
+            <li>
+                <p><b>Quiz 2: What's the main purpose of the Factory Method Pattern?</b></p>
+                <label>
+                    <input type="radio" name="quiz2" value="a">a) Simplify object creation
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz2" value="b">b) Manage shared resources
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz2" value="c">c) Encourage subclass coupling
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz2" value="d">d) Achieve runtime polymorphism
+            </label>
+                <button onclick="checkQuiz(2)">Check</button>
+                <p id="quizResult2"></p>
+            </li>
+            <li>
+                <p><b>Quiz 3: The Abstract Factory Pattern is used for:</b></p>
+                <label>
+                    <input type="radio" name="quiz3" value="a">a)  Creating objects with complex constructors
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz3" value="b">b) Creating families of related objects
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz3" value="c">c) Creating singleton instances
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz3" value="d">d) Creating objects from their prototypes
+                </label>
+                <button onclick="checkQuiz(3)">Check</button>
+                <p id="quizResult3"></p>
+            </li>
+            <li>
+                <p><b>Quiz 4: The Builder Pattern is used to: </b></p>
+                <label>
+                    <input type="radio" name="quiz4" value="a">a) Manage multiple instances of a class
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz4" value="b">b)  Construct objects step by step
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz4" value="c">c) Create factories for objects
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz4" value="d">d) Enable lazy loading of objects
+                </label>
+                <button onclick="checkQuiz(4)">Check</button>
+                <p id="quizResult4"></p>
+            </li>
+            <li>
+                <p><b>Quiz 5: What's the main advantage of the Prototype Pattern?</b></p>
+                <label>
+                    <input type="radio" name="quiz5" value="a">a) Simplifies object creation
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz5" value="b">b) Reduces class coupling
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz5" value="c">c) Allows for dynamic subclass selection
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz5" value="d">d) Avoids complex constructor chaining
+                </label>
+                <button onclick="checkQuiz(5)">Check</button>
+                <p id="quizResult5"></p>
+            </li>
+            <li>
+                <p><b>Quiz 6: The Adapter Pattern is used to:</b></p>
+                <label>
+                    <input type="radio" name="quiz6" value="a">a) Modify existing classes
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz6" value="b">b) Convert incompatible interfaces
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz6" value="c">c) Reduce object creation complexity
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz6" value="d">d) Implement dynamic polymorphism
+                </label>
+                <button onclick="checkQuiz(6)">Check</button>
+                <p id="quizResult6"></p>
+            </li>
+            <li>
+                <p><b>Quiz 7: What's the primary goal of the Bridge Pattern?</b></p>
+                <label>
+                    <input type="radio" name="quiz7" value="a">a) Simplify object creation
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz7" value="b">b) Decouple abstraction from implementation
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz7" value="c">c) Enable dynamic subclass selection
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz7" value="d">d) Achieve runtime polymorphism
+                </label>
+                <button onclick="checkQuiz(7)">Check</button>
+                <p id="quizResult7"></p>
+            </li>
+            <li>
+                <p><b>Quiz 8: In the Composite Pattern, what is a leaf?</b></p>
+                <label>
+                    <input type="radio" name="quiz8" value="a">a) A basic building block
+                </label>
+                <label>
+                    <input type="radio" name="quiz8" value="b">b) The root node of the hierarchy
+                </label>
+                <label>
+                    <input type="radio" name="quiz8" value="c">c) A node with child nodes
+                </label>
+                <label>
+                    <input type="radio" name="quiz8" value="d">d) An interface representing components
+                </label>
+                <button onclick="checkQuiz(8)">Check</button>
+                <p id="quizResult8"></p>
+            </li>
+            <li>
+                <p><b>Quiz 9: The Decorator Pattern is used to:</b></p>
+                <label>
+                    <input type="radio" name="quiz9" value="a">a) Create families of related objects
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz9" value="b">b) Add responsibilities to objects dynamically
+                </label>
+                <label>
+                     <input type="radio" name="quiz9" value="c">c) Simplify object creation
+                </label>
+                <label>
+                    <input type="radio" name="quiz9" value="d">d) Implement multiple inheritance
+                </label>
+                <button onclick="checkQuiz(9)">Check</button>
+                <p id="quizResult9"></p>
+            </li>
+            <li>
+                <p><b>Quiz 10: The Facade Pattern is used to:</b></p>
+                <label>
+                    <input type="radio" name="quiz10" value="a">a) Simplify complex subsystems
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz10" value="b">b) Implement abstract factories
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz10" value="c">c) Achieve dynamic subclass selection
+                </label>
+                <label>
+                    
+                    <input type="radio" name="quiz10" value="d">d) Reduce memory consumption
+                </label>
+                <button onclick="checkQuiz(10)">Check</button>
+                <p id="quizResult10"></p>
+            </li>
+            <li>
+                <p><b>Quiz 11: In the Proxy Pattern, what does the proxy control access to?</b></p>
+                <label>
+                    <input type="radio" name="quiz11" value="a">a) The real subject
+                </label>
+                <label>
+                    <input type="radio" name="quiz11" value="b">b) The client
+                </label>
+                <label>
+                    <input type="radio" name="quiz11" value="c">c) The decorator
+                </label>
+                <label>
+                      <input type="radio" name="quiz11" value="d">d) The factory
+                </label>
+                <button onclick="checkQuiz(11)">Check</button>
+                <p id="quizResult11"></p>
+            </li>
+            <li>
+                <p><b>Quiz 12: The Chain of Responsibility Pattern is used for:</b></p>
+                <label>
+                    <input type="radio" name="quiz12" value="a">a) Creating objects from their prototypes
+                </label>
+                <label>
+                    <input type="radio" name="quiz12" value="b">b) Decoupling sender and receiver
+                </label>
+                <label>
+                    <input type="radio" name="quiz12" value="c">c)  Defining family of algorithms
+                </label>
+                <label>
+                     <input type="radio" name="quiz12" value="d">d) Adding responsibilities dynamically
+                </label>
+                <button onclick="checkQuiz(12)">Check</button>
+                <p id="quizResult12"></p>
+            </li>
+            <li>
+                <p><b>Quiz 13: What's the primary purpose of the Observer Pattern?</b></p>
+                <label>
+                    <input type="radio" name="quiz13" value="a">a) Decoupling sender and receiver
+                </label>
+                <label>
+                    <input type="radio" name="quiz13" value="b">b) Achieving dynamic subclass selection
+                </label>
+                <label>
+                    <input type="radio" name="quiz13" value="c">c)  Defining family of algorithms 
+                </label>
+                <label>
+                      <input type="radio" name="quiz13" value="d">d) Notifying objects of state changes
+                </label>
+                <button onclick="checkQuiz(13)">Check</button>
+                <p id="quizResult13"></p>
+            </li>
+            <li>
+                <p><b>Quiz 14: The Strategy Pattern is used to:</b></p>
+                <label>
+                    <input type="radio" name="quiz14" value="a">a) Convert incompatible interfaces
+                </label>
+                <label>
+                    <input type="radio" name="quiz14" value="b">b) Encapsulate object creation
+                </label>
+                <label>
+                    <input type="radio" name="quiz14" value="c">c) Define a family of related objects
+                </label>
+                <label>  
+                    <input type="radio" name="quiz14" value="d">d) Define interchangeable algorithms
+                </label>
+                <button onclick="checkQuiz(14)">Check</button>
+                <p id="quizResult14"></p>
+            </li>
+        </ol>
+    </div>
+    <div id="feedbackTab" class="tab">
+        <h2>Feedback</h2>
+        <p>We highly value your feedback and suggestions as they help us improve our services and make your experience even better. Please take a moment to share your thoughts with us by filling out the feedback form below. Your input is invaluable to us.</p>
+        <p><a href="https://forms.gle/58rLr5Lh9kY9UHT77" target="_blank" style="color: inherit;">Feedback</a></p>
+        <h3>Privacy Note</h3>
+        <p>Your feedback is anonymous unless you choose to provide your contact information. We respect your privacy and will use your feedback solely to enhance our services.
+
+            Thank you for taking the time to help us improve. Your feedback is greatly appreciated!</p>
+    </div>
+    <div id="contactusTab" class="tab">
+        <h2>Contact Us</h2>
+        <p>Feel free to get in touch with us. We're here to help and answer any questions you might have. You can reach out to us through multiple channels:</p>
+        <h3>Email</h3>
+        <p>For general inquiries, feedback, or support, you can contact us via email at <a href="mailto:gul.rani.2021@uni.strath.ac.uk" style="color: inherit;">gul.rani.2021@uni.strath.ac.uk</a>We aim to respond within 24 hours.</p>
+        <h3>Social Media</h3>
+        <p>Connect with us on social media to stay updated on the latest news, events, and content:
+            <ul>
+                <li><b>Facebook:</b><a href="https://www.facebook.com/" target="_blank" style="color: inherit;">Facebook</a></li>
+                <li><b>Instagram:</b><a href="https://instagram.com/gul_rukh03?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D" target="_blank" style="color: inherit;">Instagram</a></li>
+            </ul>
+           <p>Whether you have questions about our services, want to collaborate, or simply want to say hello, we look forward to hearing from you. Your feedback and engagement mean a lot to us, and we're committed to providing you with the best experience possible.
+        </p>
+        </p>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,52 @@
+# Legacy Logging System
+class LegacyLogger:
+    def logInfo(self, message):
+        print(f"INFO: {message}")
+
+    def logWarning(self, message):
+        print(f"WARNING: {message}")
+
+    def logError(self, message):
+        print(f"ERROR: {message}")
+
+# Modern Logging Library
+class ModernLogger:
+    def info(self, message):
+        print(f"INFO: {message}")
+
+    def warning(self, message):
+        print(f"WARNING: {message}")
+
+    def error(self, message):
+        print(f"ERROR: {message}")
+
+# Adapter for Legacy Logging System to use Modern Logging Library
+class LegacyToModernAdapter:
+    def __init__(self, modern_logger):
+        self.modern_logger = modern_logger
+
+    def logInfo(self, message):
+        self.modern_logger.info(message)
+
+    def logWarning(self, message):
+        self.modern_logger.warning(message)
+
+    def logError(self, message):
+        self.modern_logger.error(message)
+
+# Client code
+legacy_logger = LegacyLogger()
+modern_logger = ModernLogger()
+
+# Using the adapter to make the legacy logger work with the modern logging library
+adapter = LegacyToModernAdapter(modern_logger)
+
+legacy_logger.logInfo("This is an info message (legacy)")
+legacy_logger.logWarning("This is a warning message (legacy)")
+legacy_logger.logError("This is an error message (legacy)")
+
+adapter.logInfo("This is an info message (modern via adapter)")
+adapter.logWarning("This is a warning message (modern via adapter)")
+adapter.logError("This is an error message (modern via adapter)")
+
+In this example, the LegacyToModernAdapter acts as an adapter that allows the legacy logging system to work with the modern logging library. The adapter takes an instance of the modern logger and translates the legacy logging methods into the modern ones. The client code can then use the adapted legacy logger as if it were the original, and the adapter handles the translation behind the scenes.

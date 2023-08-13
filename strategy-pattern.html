@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Strategy Pattern
+</title>
+</head>
+<body style="background-image: url('background.jpg'); background-repeat: no-repeat; background-size: cover;">
+    
+    <h1>Patterns and their Description</h1>
+<style>
+        h1, h2, h3, h4, h5, h6 {
+            color: #6B152E;
+            background-color:#D2CECD;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p,ul,ol {
+            font-family: Arial, sans-serif;
+            line-height: 2.0;
+            font-weight: 500;
+            color: #6B152E;
+        }
+        button{font-family: Arial, sans-serif;
+            font-weight: bold;
+            background-color: #D2CECD;
+        color: #6B152E; }
+    </style>
+     <link rel="icon" href="favicon.png" type="image/png">
+     <link rel="stylesheet" href="styles.css">
+<h3>Strategy Pattern</h3>
+                <p>The Strategy pattern is a design pattern in software engineering that defines a family of interchangeable algorithms and makes them interchangeable within a context. It allows you to encapsulate different algorithms and behaviors in separate classes, allowing them to be used interchangeably based on the specific context or requirements.<a href="https://en.wikipedia.org/wiki/strategy_pattern" target="_blank" style="color: inherit;">Learn more</a>.</p>
+                <h5>Key Characteristics</h5>
+                <p>Key characteristics of the Strategy pattern include:</p>
+                <ol>
+                    <li>
+                       <b>Handler Interface: </b>The pattern defines a common interface for all handlers in the chain, ensuring they have a handle_request method to process incoming requests.
+                    </li>
+                    <li>
+                       <b>Concrete Handlers: </b> Concrete classes that implement the handler interface. Each handler decides whether to process the request or pass it along the chain.
+                    </li>
+                    <li>
+                        <b>Successor: </b>Each handler in the chain holds a reference to its successor (next handler) in the chain. If the current handler can't process the request, it forwards it to the successor.
+                    </li>
+                    <li>
+                        <b>Responsibility: </b> Each handler has a specific responsibility, and the chain's structure determines the order in which handlers are invoked.
+                    </li>
+                    <li>
+                        <b>Client: </b>The client creates the chain and initiates the request, typically starting with the first handler in the chain.
+                    </li>
+                </ol>
+                <h5>Class Diagram</h5>
+                <img src="strategy-diagram.png" alt="Strategy Pattern Diagram" width="500" height="300">
+                <h5>Example</h5>
+                <p>A real-world example of the Strategy pattern can be found in payment processing systems used by e-commerce platforms. Different payment methods, such as credit cards, PayPal, and digital wallets, require different algorithms for processing payments. The Strategy pattern can be used to implement these payment processing strategies in a flexible and interchangeable way.
+<button onclick="window.open('strategy-example.txt', '_blank')">View Strategy Pattern Example</button></p>
+ </li>
+</body>
+</html>
+            

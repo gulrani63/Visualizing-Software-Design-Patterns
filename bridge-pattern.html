@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bridge Pattern
+</title>
+</head>
+<body style="background-image: url('background.jpg'); background-repeat: no-repeat; background-size: cover;">
+    
+    <h1>Patterns and their Description</h1>
+<style>
+        h1, h2, h3, h4, h5, h6 {
+            color: #6B152E;
+            background-color:#D2CECD;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p,ul,ol {
+            font-family: Arial, sans-serif;
+            line-height: 2.0;
+            font-weight: 500;
+            color: #6B152E;
+        }
+        button{font-family: Arial, sans-serif;
+            font-weight: bold;
+            background-color: #D2CECD;
+        color: #6B152E; }
+    </style>
+     <link rel="icon" href="favicon.png" type="image/png">
+     <link rel="stylesheet" href="styles.css">
+<h3>Bridge Pattern</h3>
+                <p>The Bridge pattern is a design pattern in software engineering that decouples an abstraction from its implementation, allowing both to vary independently. It's used when you have a situation where a class has multiple dimensions of variability and you want to avoid a direct, tight coupling between these dimensions.<a href="https://en.wikipedia.org/wiki/bridge_pattern" target="_blank" style="color: inherit;">Learn more</a>.</p>
+                <h5>Key Characteristics</h5>
+                <p>Key characteristics of the Bridge pattern include:</p>
+                <ol>
+                    <li>
+                       <b>Abstraction: </b>The pattern defines an "Abstraction" class that provides a high-level interface and delegates the implementation details to a separate "Implementation" hierarchy.
+                    </li>
+                    <li>
+                       <b>Implementation:  </b>The pattern defines an "Implementation" interface or abstract class that declares the methods for implementing the specific functionality.
+                    </li>
+                    <li>
+                        <b>Refined Abstractions:  </b>Concrete subclasses of the "Abstraction" class are called "Refined Abstractions." They extend the base abstraction by adding additional features.
+                    </li>
+                    <li>
+                        <b>Concrete Implementations:  </b>Concrete subclasses of the "Implementation" interface provide the actual implementation details for the methods declared in the "Implementation" hierarchy.
+                    </li>
+                    <li>
+                        <b>Decoupling:  </b>The Bridge pattern separates the abstraction and implementation hierarchies, allowing changes in one hierarchy to not affect the other.
+                    </li>
+                </ol>
+                <h5>Class Diagram</h5>
+                <img src="bridge-diagram.png" alt="Bridge Pattern Diagram" width="300" height="300">
+                <h5>Example</h5>
+                <p> A real-world example of the Bridge pattern can be found in the development of drawing applications that support different shapes and rendering platforms. The Bridge pattern allows you to separate the shape classes from the rendering logic, enabling you to create different combinations of shapes and renderers without having to create a multitude of subclasses.
+<button onclick="window.open('bridge-example.txt', '_blank')">View Bridge Pattern Example</button></p>
+ </li>
+</body>
+</html>
+            

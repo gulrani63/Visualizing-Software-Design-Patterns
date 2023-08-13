@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adapter Pattern </title>
+</head>
+<body style="background-image: url('background.jpg'); background-repeat: no-repeat; background-size: cover;">
+    
+    <h1>Patterns and their Description</h1>
+<style>
+        h1, h2, h3, h4, h5, h6 {
+            color: #6B152E;
+            background-color:#D2CECD;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p,ul,ol {
+            font-family: Arial, sans-serif;
+            line-height: 2.0;
+            font-weight: 500;
+            color: #6B152E;
+        }
+        button{font-family: Arial, sans-serif;
+            font-weight: bold;
+            background-color: #D2CECD;
+        color: #6B152E; }
+    </style>
+     <link rel="icon" href="favicon.png" type="image/png">
+     <link rel="stylesheet" href="styles.css">
+<h3>Adapter Pattern</h3>
+                <p> The Adapter pattern is a design pattern in software engineering that allows incompatible interfaces to work together. It acts as a bridge between two incompatible interfaces, allowing objects with different interfaces to collaborate. This pattern is used when you want to reuse an existing class with an interface that another class or system expects, without modifying the source code of either.<a href="https://en.wikipedia.org/wiki/adapter_pattern" target="_blank" style="color: inherit;">Learn more</a>.</p>
+                <h5>Key Characteristics</h5>
+                <p>Key characteristics of the Adapter pattern include:</p>
+                <ol>
+                    <li>
+                       <b>Compatibility:  </b>The Adapter pattern allows objects with different interfaces to work together by providing an intermediary that translates between the two.</li>
+                    <li>
+                       <b>Wrapper: </b>The adapter acts as a wrapper around the existing class, allowing it to be used in contexts where its original interface is not suitable.</li>
+                    <li>
+                        <b>Two Types: </b> There are two main types of adapters:
+                        <ul>
+                            <li><b>Class Adapter:</b> Uses multiple inheritance to adapt one interface to another. It inherits the source class and also implements the target interface.</li>
+                            <li><b>Object Adapter</b>Uses composition to hold an instance of the source class while implementing the target interface.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Transparency:  </b>The client code that uses the adapted class isn't aware of the adaptation taking place; it interacts with the adapted interface as if it's the original.</li>
+                    <li>
+                        <b>Reusability: </b>The Adapter pattern allows you to reuse existing classes that might not have the desired interface without modifying their code.</li>
+                </ol>
+                <h5>Class Diagram</h5>
+                <img src="adapter-diagram.png" alt="Adapter Pattern Diagram" width="300" height="300">
+                <h5>Example</h5>
+                <p>Imagine you have a legacy system that uses an older logging mechanism with methods like logInfo, logWarning, and logError. However, you want to integrate a modern logging library that uses methods like info, warning, and error. You can use the Adapter pattern to create an adapter that allows the legacy logging system to work seamlessly with the new logging library.
+
+                <button onclick="window.open('adapter-example.txt', '_blank')">View Adapter Pattern Example</button></p>  
+            </li>
+</body>
+</html>

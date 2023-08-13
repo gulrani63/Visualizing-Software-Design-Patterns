@@ -1,0 +1,41 @@
+class ConfigurationManager:
+    _instance = None
+    _loaded_configurations = {}
+
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super(ConfigurationManager, cls).__new__(cls)
+        return cls._instance
+
+    def load_configuration(self, config_name):
+        if config_name not in self._loaded_configurations:
+            # Simulating loading configuration from file or source
+            config_data = {"config_name": config_name, "setting1": "default_value"}
+            self._loaded_configurations[config_name] = config_data
+
+    def get_configuration(self, config_name):
+        if config_name in self._loaded_configurations:
+            return self._loaded_configurations[config_name]
+        else:
+            raise ValueError(f"Configuration '{config_name}' not found.")
+
+# Using the ConfigurationManager
+config_manager = ConfigurationManager()
+
+# Load and get configurations
+config_manager.load_configuration("gameplay")
+config_manager.load_configuration("graphics")
+
+gameplay_config = config_manager.get_configuration("gameplay")
+print(gameplay_config)
+
+graphics_config = config_manager.get_configuration("graphics")
+print(graphics_config)
+
+# Trying to create another instance, but it will still refer to the same instance
+another_config_manager = ConfigurationManager()
+print(config_manager is another_config_manager)  # This will print True
+
+In this example, the ConfigurationManager class uses the Singleton pattern to ensure that only one instance of the configuration manager is created and shared across the application. The _loaded_configurations dictionary stores the loaded configuration data for different settings. The load_configuration method simulates loading configurations, and the get_configuration method retrieves a configuration by name.
+
+Using the Singleton pattern in this scenario helps prevent unnecessary duplication of configuration data and ensures consistent access to configuration settings throughout the game's runtime.

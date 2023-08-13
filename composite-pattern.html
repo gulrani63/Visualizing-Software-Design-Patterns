@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decorator Pattern
+</title>
+</head>
+<body style="background-image: url('background.jpg'); background-repeat: no-repeat; background-size: cover;">
+    
+    <h1>Patterns and their Description</h1>
+<style>
+        h1, h2, h3, h4, h5, h6 {
+            color: #6B152E;
+            background-color:#D2CECD;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p,ul,ol {
+            font-family: Arial, sans-serif;
+            line-height: 2.0;
+            font-weight: 500;
+            color: #6B152E;
+        }
+        button{font-family: Arial, sans-serif;
+            font-weight: bold;
+            background-color: #D2CECD;
+        color: #6B152E; }
+    </style>
+     <link rel="icon" href="favicon.png" type="image/png">
+     <link rel="stylesheet" href="styles.css">
+<h3>Composite Pattern</h3>
+                <p>The Composite pattern is a design pattern in software engineering that lets you compose objects into tree structures to represent part-whole hierarchies. It allows clients to treat individual objects and compositions of objects uniformly. The pattern is used when you have a structure that can be represented as a hierarchical tree and you want to apply the same operations to individual objects and their compositions.<a href="https://en.wikipedia.org/wiki/composite_pattern" target="_blank" style="color: inherit;">Learn more</a>.</p>
+                <h5>Key Characteristics</h5>
+                <p>Key characteristics of the Composite pattern include:</p>
+                <ol>
+                    <li>
+                       <b>Component: </b>The pattern defines an abstract base class (or interface) called the "Component" that declares the common interface for all concrete elements in the composition.
+                    </li>
+                    <li>
+                       <b>Leaf: </b>"Leaf" components represent individual objects that have no children in the composition hierarchy.
+                    </li>
+                    <li>
+                        <b>Composite: </b>  "Composite" components represent containers that can hold other components, including both leaves and other composites.
+                    </li>
+                    <li>
+                        <b>Recursive Structure: </b>The composition forms a recursive structure, where both individual objects and compositions can have children.
+                    </li>
+                    <li>
+                        <b>Uniformity: </b>The pattern allows clients to treat single objects and compositions of objects uniformly by using the same interface for both.
+                    </li>
+                </ol>
+                <h5>Class Diagram</h5>
+                <img src="composite-diagram.png" alt="Composite Pattern Diagram" width="300" height="300">
+                <h5>Example</h5>
+                <p> A real-world example of the Composite pattern can be found in graphical user interface (GUI) frameworks. Imagine you're building a GUI framework that consists of various graphical elements such as windows, buttons, and panels. These elements can be arranged hierarchically to create complex layouts.
+<button onclick="window.open('composite-example.txt', '_blank')">View Composite Pattern Example</button></p>
+ </li>
+</body>
+</html>
+            
