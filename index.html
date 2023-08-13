@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualizing Design Patterns: A Student-Centric Learning App
 </title>
     
@@ -89,6 +91,46 @@
         }
      
     </script>
+    <style>
+        /* Add any additional styles for the About page here */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F7F7F7;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px;
+            text-align: center;
+        }
+        h1 {
+            color: #6B152E;
+        }
+        p {
+            font-size: 18px;
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .feature {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .feature img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body style="background-image: url('background.jpg'); background-repeat: no-repeat; background-size: cover;">
     
@@ -102,7 +144,29 @@
         <button class="active" onclick="openTab('feedbackTab')">Feedback</button>
         <button class="active" onclick="openTab('contactusTab')">Contact Us</button>
     </div>
-    
+     <div class="container">
+        <h1>About Software Design Patterns Visualization</h1>
+        <p>Welcome to the Software Design Patterns Visualization application! Our mission is to make learning software design patterns engaging and interactive.</p>
+        <p>Software design patterns are fundamental concepts in software engineering. They provide solutions to recurring design problems, making code more maintainable and efficient.</p>
+        <p>Our application offers visualizations of various design patterns, helping students and developers understand these patterns through interactive examples and quizzes.</p>
+        <div class="features">
+            <div class="feature">
+                <img src="interactive.png" alt="Interactive Visualizations">
+                <h3>Interactive Visualizations</h3>
+                <p>Explore design patterns through interactive diagrams and animations that make complex concepts easier to grasp.</p>
+            </div>
+            <div class="feature">
+                <img src="learn.png" alt="Learn at Your Pace">
+                <h3>Learn at Your Pace</h3>
+                <p>Whether you're a beginner or an experienced developer, our application caters to your learning needs with quizzes and exercises.</p>
+            </div>
+            <div class="feature">
+                <img src="community.png" alt="Engage with the Community">
+                <h3>Engage with the Community</h3>
+                <p>Join our community to discuss design patterns, share insights, and collaborate with fellow learners from around the world.</p>
+            </div>
+        </div>
+    </div>
 
     <div id="homeTab" class="tab" style="display: block;">
         <h2>What are Software Design Patterns?</h2>
